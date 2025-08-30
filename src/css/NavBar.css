@@ -1,0 +1,63 @@
+@font-face {
+    font-family: "CenturyGothic";
+    src: url(../assets/centurygothic_bold.ttf);
+}
+
+.navbar {
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    padding: 25px 35px;
+}
+
+.left-section {
+    display: flex;
+    align-items: center;
+}
+
+.right-section {
+    display: flex;
+    align-items: center;
+}
+
+.nav-link img {
+    height: 22px;
+}
+
+.right-section .nav-link img {
+    height: 27px;
+}
+
+.nav-link {
+    margin: 10px;
+}
+
+.nav-items {
+    margin-left: 10px;
+}
+
+.brand img {
+    height: 50px;
+}
+
+.brand {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand-name {
+    color: white;
+    text-decoration: none;
+    padding-left: 0.5rem;
+    height: 100px;
+    margin-top: 67px;
+    font-family: "CenturyGothic", sans-serif;
+    font-size: 1.4rem;
+}

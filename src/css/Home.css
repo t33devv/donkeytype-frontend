@@ -1,0 +1,26 @@
+.home {
+    display: flex;
+    justify-content: center;
+    margin-top: 104px;
+}
+
+.option-bar {
+    width: 75%;
+    height: 33px;
+    background-color: #3a3b3b;
+    border-radius: 7px;
+    display: grid;
+    grid-template-columns: 0.5fr 0.05fr 1fr;
+}
+
+.home .left-section {
+    background-color: lightpink;
+}
+
+.home .split {
+    background-color: lightblue;
+}
+
+.home .right-section {
+    background-color: lightgreen;
+}
