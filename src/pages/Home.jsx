@@ -4,15 +4,33 @@ function Home() {
     return(
         <>
             <div className="home">
-                <div class="option-bar">
-                    <div class="left-section">
-
+                <div className="option-bar">
+                    <div className="left-section">
+                        <button>
+                            time
+                        </button>
+                        <button>
+                            words
+                        </button>
                     </div>
-                    <div class="split">
+                    <div className="split">
+                        <div className="rectangle">
 
+                        </div>
                     </div>
-                    <div class="right-section">
-
+                    <div className="right-section">
+                        <button>
+                            15
+                        </button>
+                        <button>
+                            30
+                        </button>
+                        <button>
+                            60
+                        </button>
+                        <button>
+                            120
+                        </button>
                     </div>
                 </div>
             </div>
