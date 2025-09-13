@@ -64,7 +64,6 @@
     justify-content: center;
     flex-direction: column;
     margin-top: 50px;
-    position: relative;
 }
 
 .typing-container input {
@@ -81,27 +80,24 @@
     letter-spacing: 2px;
 }
 
-.cursor {
-    width: 37px;
-    height: 70px;
-    background-color: #a5a096;
-    position: absolute;
-    top: -3px;
-    left: 80px;
-    z-index: -100;
-    border-radius: 5px;
-    animation: blink 1.1s infinite;
+@media (min-width: 1500px) {
+    .typing-container .words {
+        width: 1200px;
+    }
 }
 
-/* every letter is 36 px */
+.current-letter {
+    background-color: #a5a096;
+    animation: blink 1s infinite;
+}
 
 @keyframes blink {
     0%,
     50% {
-        opacity: 1;
+        background-color: #a5a096;
     }
     51%,
     100% {
-        opacity: 0;
+        background-color: transparent;
     }
 }

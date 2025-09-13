@@ -63,9 +63,7 @@ function TypingWindow() {
     return (
         <>
             <div className="typing-container" onClick={() => inputRef.current?.focus()}>
-                <div className="cursor">
                 
-                </div>
                 <div className="words" aria-live="polite">
                     {words.map((w, i) => {
                         const isCurrent = i === index
@@ -80,7 +78,26 @@ function TypingWindow() {
                                     status === "incorrect" ? "incorrect" : ""
                                 ].join(" ").trim()}
                             >
-                                {w}{" "}
+                                {isCurrent ? (
+                                    <>
+                                        {input.length < w.length ? (
+                                            <>
+                                                {w.slice(0, input.length)}
+                                                <span className="current-letter">{w[input.length]}</span>
+                                                {w.slice(input.length + 1)}
+                                            </>
+                                        ) : (
+                                            <>
+                                                {w.slice(0, w.length - 1)}
+                                                <span className="current-letter">{w[w.length - 1]}</span>
+                                                {w.slice(w.length)}
+                                            </>
+                                        )}
+                                        
+                                    </>
+                                ) : (
+                                    w
+                                )}{" "}
                             </span>
                         )
                     })}
