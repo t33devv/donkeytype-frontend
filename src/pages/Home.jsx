@@ -63,8 +63,8 @@ function TypingWindow() {
     return (
         <>
             <div className="typing-container" onClick={() => inputRef.current?.focus()}>
-                <div className="typing-header">
-                    <button className="reset-btn" onClick={resetTest}>reset</button>
+                <div className="cursor">
+                
                 </div>
                 <div className="words" aria-live="polite">
                     {words.map((w, i) => {
@@ -80,7 +80,7 @@ function TypingWindow() {
                                     status === "incorrect" ? "incorrect" : ""
                                 ].join(" ").trim()}
                             >
-                                {w}
+                                {w}{" "}
                             </span>
                         )
                     })}
@@ -99,6 +99,9 @@ function TypingWindow() {
                     autoCapitalize="off"
                     spellCheck="false"
                 />
+                <div className="typing-header">
+                    <button className="reset-btn" onClick={resetTest}>reset</button>
+                </div>
             </div>
         </>
     )
