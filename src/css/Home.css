@@ -86,9 +86,19 @@
     }
 }
 
-.current-letter {
+.active .current-letter {
+    background-color: #a5a096;
+    display: inline-block;
+}
+
+.inactive .current-letter {
     background-color: #a5a096;
     animation: blink 1s infinite;
+    display: inline-block;
+}
+
+.completed-part {
+    color: rgb(227, 227, 227);
 }
 
 @keyframes blink {

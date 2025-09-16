@@ -65,6 +65,9 @@ function TypingWindow() {
             <div className="typing-container" onClick={() => inputRef.current?.focus()}>
                 
                 <div className="words" aria-live="polite">
+                    <span className="completed-part">
+                        {words.slice(0, index).join(" ")}
+                    </span>
                     {words.map((w, i) => {
                         const isCurrent = i === index
                         const status = results[i];
@@ -78,25 +81,32 @@ function TypingWindow() {
                                     status === "incorrect" ? "incorrect" : ""
                                 ].join(" ").trim()}
                             >
+                                {console.log(words)}
+                               
                                 {isCurrent ? (
-                                    <>
+                                    <span className={input.length > 0 ? "active" : "inactive"}>
                                         {input.length < w.length ? (
                                             <>
-                                                {w.slice(0, input.length)}
+                                                <span className="completed-part">
+                                                    {w.slice(0, input.length)}
+                                                </span>
                                                 <span className="current-letter">{w[input.length]}</span>
                                                 {w.slice(input.length + 1)}
                                             </>
                                         ) : (
                                             <>
-                                                {w.slice(0, w.length - 1)}
-                                                <span className="current-letter">{w[w.length - 1]}</span>
-                                                {w.slice(w.length)}
+                                                <span className="completed-part">
+                                                    {/* {words.slice(0, i)} */}
+                                                    {w.slice(0, w.length - 1)}
+                                                    <span className="current-letter">{w[w.length - 1]}</span>
+                                                </span>
+                                                
                                             </>
                                         )}
                                         
-                                    </>
+                                    </ span>
                                 ) : (
-                                    w
+                                    i > index ? w : ""
                                 )}{" "}
                             </span>
                         )
