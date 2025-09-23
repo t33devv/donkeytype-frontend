@@ -5,6 +5,8 @@ import Account from './pages/Account.jsx'
 import Settings from './pages/Settings.jsx'
 import AccountSettings from './pages/AccountSettings.jsx'
 import Info from './pages/Info.jsx'
+import Login from './pages/Login.jsx'
+import Register from './pages/Register.jsx'
 
 import './css/App.css'
 
@@ -18,7 +20,10 @@ function App() {
       <main className="main-content">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/account" element={<Account />} />
+          <Route path="/account" element={<Account />}>
+            <Route path="login" element={< Login />} />
+            <Route path="register" element={< Register />} />
+          </Route>
           <Route path="/settings" element={<Settings />} />
           <Route path="/account-settings" element={<AccountSettings />} />
           <Route path="/info" element={<Info />} />

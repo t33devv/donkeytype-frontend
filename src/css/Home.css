@@ -11,6 +11,7 @@
     border-radius: 7px;
     display: grid;
     grid-template-columns: 0.7fr 0.05fr 1fr;
+    margin-top: 20px;
 }
 
 .home .left-section {
@@ -63,7 +64,8 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin-top: 50px;
+    margin-top: 15%;
+    line-height: 75px;
 }
 
 .typing-container input {
@@ -110,4 +112,27 @@
     100% {
         background-color: transparent;
     }
+}
+
+.typing-header .reset-btn {
+    margin-top: 20px;
+    background: none;
+    border: none;
+    color: #5d6263;
+    font-size: 3.5rem;
+    border-radius: 10px;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    padding-bottom: 5px;
+    height: 55px;
+    transition: background 0.15s;
+}
+
+.typing-header .reset-btn:hover {
+    background: #a5a096;
+}
+
+.typing-header .reset-btn:active {
+    background: white;
 }

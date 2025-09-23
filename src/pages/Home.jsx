@@ -127,7 +127,7 @@ function TypingWindow() {
                     spellCheck="false"
                 />
                 <div className="typing-header">
-                    <button className="reset-btn" onClick={resetTest}>reset</button>
+                    <button className="reset-btn" onClick={resetTest}>⟳</button>
                 </div>
             </div>
         </>
